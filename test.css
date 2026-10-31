@@ -1,0 +1,73 @@
+html, body{
+    overflow-x: hidden;
+}
+body{
+    background-color: black;
+    margin: 0;
+}
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+h1{
+    font-size: 100px;
+    color: blue;
+    text-align: center;
+    text-shadow: 0 0 20px blue;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+img{
+    width: 500px;
+    margin: 0 auto;
+    margin-left: 30%;
+    border-radius: 50px;
+    box-shadow: 0 0 30px white;
+}
+.href{
+    text-decoration: none;
+    font-size: 20px;
+    animation: move 5s ease-in-out infinite alternate;
+}
+.href:hover{
+    color: skyblue;
+    text-decoration: underline;
+}
+/* ===== 打字机个人介绍 ===== */
+.typewriter{
+    text-align: center;
+    font-size: 40px;
+    color: #ffb347;
+    text-shadow: 0 0 15px #ffb347;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 60px;
+}
+.cursor{
+    animation: blink 0.7s step-start infinite;
+}
+@keyframes blink{
+    50% {opacity: 0;}
+}
+@keyframes move{
+    0% {transform: translateX(200px);}
+    100% {transform: translateX(-200px);}
+}
+
+.fake-alert{
+    background-color: black;
+    color: red;
+    position: fixed;
+    top:50px;
+    left:50px;
+    border-radius: 10px;
+    border: 2px solid red;
+    box-shadow: 0 0 25px red;
+    padding: 10px 20px;
+    font-weight: bold;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: all 0.5s;
+}
