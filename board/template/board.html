@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>个人网页</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}">
+    </head>
+    <body>
+        <canvas id="matrix"></canvas>
+        <h1>欢迎侯老师😂</h1>
+        <div class="typewriter">
+            <span id="type-text"></span><span class="cursor">|</span>
+        </div>
+        <script src="{{ url_for('static', filename='test.js') }}"></script>
+        <img src="{{ url_for('static', filename='d_bg.png') }}" onclick="test()">
+        <a class="href" href="https://space.bilibili.com/3706968327850245">
+            <h1 class="href">传送：我的主页</h1>
+        </a>
+
+        <div class="out">
+            {% for msg in messages %}
+                <div class="msg-item" style="animation-delay: {{ loop.index0 * 0.15 }}s">{{ msg.name }} - {{ msg.msg }}</div>
+            {% endfor %}
+        </div>
+
+        <form action="/post" method="POST">
+            <input name="name" placeholder="你的名字">
+            <input name="msg" placeholder="说点什么……">
+            <button type="submit">发送</button>
+        </form>
+
+    </body>
+</html>
