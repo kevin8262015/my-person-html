@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>随机数</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+            transition: background-color 0.4s ease;
+        }
+        .box {
+            font-size: 120px;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            margin-bottom: 30px;
+        }
+        button {
+            font-size: 22px;
+            padding: 12px 36px;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 8px;
+            background: rgba(0,0,0,0.25);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: rgba(0,0,0,0.55);
+            transform: scale(1.05);
+        }
+        .hint {
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.7;
+            text-align: center;
+            color: #fff;
+        }
+        h1 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="num">?</div>
+    <button onclick="roll()">生成随机数</button>
+
+    <script>
+        function roll() {
+            const n = Math.floor(Math.random() * 101); // 0 ~ 100
+            document.getElementById('num').textContent = n;
+
+            let color;
+            const tmp = Math.random(0, 3);
+            if (tmp == 1) {
+                color = '#3cb371';        // 绿色
+            } else if (tmp == 2) {
+                color = '#00ffff';        // 青色
+            } else {
+                color = '#87ceeb';        // 天蓝
+            }
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+    <a href="/">
+        <h1>返回首页</h1>
+    </a>
+
+
+</body>
+</html>

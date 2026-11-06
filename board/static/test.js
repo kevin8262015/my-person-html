@@ -48,7 +48,7 @@ window.addEventListener("resize", initMatrix);
 // ===== 代码雨结束 =====
 
 // ===== 打字机个人介绍 =====
-const sentences = ["你好侯老师", "我是一名mc爱好者", "很高兴认识你"];
+const sentences = ["大家好", "我是一名mc爱好者", "很高兴认识你"];
 const typeText = document.getElementById("type-text");
 let sentenceIndex = 0;
 let charIndex = 0;

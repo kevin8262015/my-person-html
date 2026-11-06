@@ -16,4 +16,9 @@ def post():
     print("log:msg:" + msg)
     return redirect("/")
 
-app.run(debug=True)
+@app.route("/random")
+def random_page():
+    return render_template("random.html")
+
+def run():
+    app.run(debug=True)
